@@ -28,6 +28,7 @@ def third_product():
         quantity=14,
     )
 
+
 @pytest.fixture
 def category(first_product, second_product, third_product):
     return Category(
