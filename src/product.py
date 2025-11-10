@@ -8,7 +8,6 @@ class Product(BaseProduct, PrintMixin):
     price: float
     quantity: int
 
-
     def __init__(self, name, description, price, quantity):
         self.name = name
         self.description = description
