@@ -13,3 +13,15 @@ def test_product_init(first_product, second_product, third_product):
     assert third_product.description == "1024GB, Синий"
     assert third_product.price == 31000.0
     assert third_product.quantity == 14
+
+
+def test_product_add_price(first_product, second_product, third_product):
+    assert first_product + second_product == 2580000.0
+    assert first_product + third_product == 1334000.0
+    assert second_product + third_product == 2114000.0
+
+
+def test_product_str(first_product, second_product, third_product):
+    assert str(first_product) == "Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт."
+    assert str(second_product) == "Iphone 15, 210000.0 руб. Остаток: 8 шт."
+    assert str(third_product) == "Xiaomi Redmi Note 11, 31000.0 руб. Остаток: 14 шт."
